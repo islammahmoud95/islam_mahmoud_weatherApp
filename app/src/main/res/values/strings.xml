@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="add">Add</string>
+    <string name="add_new_city">Add New City</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="cities">Cities</string>
+    <string name="weather_information_received">Weather Information for %1$2s received on %2$2s</string>
+    <string name="description">Description : %1$2s</string>
+    <string name="temp">Temp : %1$2s C</string>
+    <string name="humidity">Humidity : %1$2s </string>
+    <string name="windSpeed">WindsSpeed : %1$2s kmh</string>
+    <string name="description_temp"> %1$2s , %2$2s C</string>
+    <string name="hitoricall">Historical</string>
+
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.task.weatherapp.ui.fragments.home.HomeFragment"
+        android:label="@string/cities"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_more_info"
+            app:destination="@id/navigation_more_info" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.task.weatherapp.ui.fragments.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <argument
+            android:name="id"
+            app:argType="integer"
+            />
+        <argument
+            android:name="name"
+            app:argType="string"
+            />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_navigation_more_info"
+            app:destination="@id/navigation_more_info" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_more_info"
+        android:name="com.task.weatherapp.ui.fragments.moreinfo.MoreInfoFragment"
+        android:label=""
+        tools:layout="@layout/fragment_more_info" >
+        <argument
+            android:name="name"
+            app:argType="string"
+          />
+        <argument
+            android:name="id"
+            app:argType="integer"
+
+            />
+        <argument
+            android:name="weatherTable"
+            app:argType="com.task.weatherapp.data.local.table.WeatherTable"
+            app:nullable="true"
+            />
+
+    </fragment>
+</navigation>
